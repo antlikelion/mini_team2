@@ -69,11 +69,21 @@
   </div>
   <div class="function_introduce">
     <h2>구현 기능</h2>
-    <h4>Responsive menu</h4>
+    <h4>1.동영상 끌어오기</h4>
+    <img src="https://github.com/antlikelion/html_css/blob/master/video.png" alt="안보여요" style="width:500px;"/>
+    <pre>
+<iframe
+src="https://www.youtube.com/embed/bPNDnoZoIWg"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen
+></iframe>  
+    </pre>
+    <h4>2.Responsive menu</h4>
     <img src="https://github.com/antlikelion/html_css/blob/master/Responsive_Menu.png" alt="안보여요" style="width:500px;"/>
-    <h4>애니메이션</h4>
+    <h4>3.애니메이션</h4>
     <img src="https://github.com/antlikelion/html_css/blob/master/%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98.png" alt="안보여요" style="width:500px;"/>
-    <h4>로그인, 로그아웃, 회원가입</h4>
+    <h4>4.로그인, 로그아웃, 회원가입</h4>
     <pre>
 forms.py
 from django.contrib.auth.models import User
@@ -140,7 +150,7 @@ def signup(request):
         form = UserForm()
         return render(request, 'registration/signup.html', {'form' : form})
     </pre>
-    <h4>댓글 기능 구현</h4>
+    <h4>5.댓글 기능 구현</h4>
     <pre>
     models.py
     class Comment(models.Model):
