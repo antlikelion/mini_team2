@@ -84,6 +84,7 @@ allowfullscreen
     <h4>3.애니메이션</h4>
     <img src="https://github.com/antlikelion/html_css/blob/master/%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98.png" alt="안보여요" style="width:500px;"/>
     <h4>4.로그인, 로그아웃, 회원가입</h4>
+    <img src="https://github.com/antlikelion/mini_team2/blob/master/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.png" alt ="회원가입">
     <pre>
 forms.py
 from django.contrib.auth.models import User
@@ -151,6 +152,7 @@ def signup(request):
         return render(request, 'registration/signup.html', {'form' : form})
     </pre>
     <h4>5.댓글 기능 구현</h4>
+    <img src= "https://github.com/antlikelion/mini_team2/blob/master/%EB%8C%93%EA%B8%80.png" alt="comment">
     <pre>
     models.py
     class Comment(models.Model):
@@ -181,6 +183,7 @@ class CfCommentForm(forms.ModelForm):
         fields = ( 'cfcontent' , )
     </pre>
     <h4>6. 게시물 별 조회수</h4>
+    <img src="https://github.com/antlikelion/mini_team2/blob/master/%EC%A2%8B%EC%95%84%EC%9A%94.png" alt="like">
     <p sytle="white-space: pre-wrap"> 조회수가 많은 영화들이 더 상위에 노출되게 하고 싶었다. 일단 그러면 게시물 별로 조회수 정보를 가지고 있어야 했다. 그래서, 모델에서 Post class에 post_hit 라는 변수를 추가하고, 그 내부에 post_hit를 1씩 증가시켜주는 update_counter 함수를 만들었다. 그리고 detail.html의 상위에 {{ post.update_counter }}를 써서, detail 페이지에 접속할 때마다 함수가 실행되도록 하였다. 그리고 model의 update_counter 함수 위에 @property를 써넣는 것은, 변수를 변경할 때 어떠한 제한을 두고 싶어서 넣는 것이라고 하는데, 이 부분에 대해서는 더 공부를 해야할 것 같다.
     </p>
     <h4>7. 홈 화면 노출시 조회수 순 정렬 노출 구현</h4>
